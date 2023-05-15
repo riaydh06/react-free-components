@@ -1,6 +1,6 @@
 {
   "name": "react-free-components",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "for test",
   "scripts": {
     "rollup": "rollup -c",
@@ -41,5 +41,8 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "type": "module"
+  "type": "module",
+  "resolutions": {
+    "react-error-overlay": "6.0.9"
+  }
 }
