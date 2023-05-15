@@ -1,6 +1,6 @@
 {
-  "name": "react-free-component",
-  "version": "1.0.2",
+  "name": "react-free-components",
+  "version": "1.0.0",
   "description": "for test",
   "scripts": {
     "rollup": "rollup -c",
