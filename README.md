@@ -34,8 +34,7 @@ const columns = [
       {
         label: "Tags",
         key: "tags",
-        render: (data: any) => {
-          console.log(data);
+        renderData: (data: any) => {
           return (
             <div
               style={{

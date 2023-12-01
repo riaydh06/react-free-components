@@ -1,10 +1,11 @@
 import React from "react";
-import { Table } from "./styles";
+import { Table } from "./Table";
 
 interface Column<T> {
-  label: string;
+  label?: string;
   key: string;
-  render?: (row: T) => React.ReactNode;
+  renderHeader?: React.ReactNode;
+  renderData?: (row: T) => React.ReactNode;
 }
 
 interface Row {}
@@ -16,11 +17,13 @@ interface Props<T> {
 
 function TablePrimary<T extends Row>({ columns = [], rows = [] }: Props<T>) {
   return (
-    <Table style={{ border: "1px solid red" }}>
+    <Table>
       <thead>
         <tr>
-          {columns?.map((item: Column<T>, idx) => (
-            <th key={idx}>{item.label}</th>
+          {columns?.map((column: Column<T>, idx) => (
+            <th key={idx}>
+              {column.renderHeader ? column.renderHeader : column.label}
+            </th>
           ))}
         </tr>
       </thead>
@@ -30,8 +33,8 @@ function TablePrimary<T extends Row>({ columns = [], rows = [] }: Props<T>) {
             {columns?.map((column: Column<T>, idx: number) => {
               const data = row?.[column?.key as keyof typeof row];
               return data ? (
-                <td key={idx} className="fs-sm">
-                  {column?.render ? column?.render(row) : <>{data}</>}
+                <td key={idx}>
+                  {column?.renderData ? column?.renderData(row) : <>{data}</>}
                 </td>
               ) : null;
             })}
