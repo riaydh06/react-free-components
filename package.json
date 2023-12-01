@@ -1,7 +1,14 @@
 {
   "name": "react-free-table",
-  "version": "1.0.15",
-  "description": "for test",
+  "version": "1.0.0",
+  "description": "this is free component",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riaydh06/react-free-components/tree/react-free-table"
+  },
+  "bugs": {
+    "url": "https://github.com/riaydh06/react-free-components/tree/react-free-table/issues"
+  },
   "scripts": {
     "rollup": "rollup -c",
     "test": "echo \"Error: no test specified\" && exit 1",

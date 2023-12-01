@@ -86,7 +86,7 @@ const columns = [
       },
     ],
 
-export default function DenseTable() {
+export default function Table() {
   return (
     <TablePrimary
         columns={columns}
