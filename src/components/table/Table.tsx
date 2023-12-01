@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-interface TableProps {
+export interface TableProps {
+  bgColor?: string;
   borderWidth?: string;
   borderColor?: string;
   textAlign?: string;
@@ -8,6 +9,10 @@ interface TableProps {
   hoverColor?: string;
   textColor?: string;
 }
+
+export const Responsive = styled.div<TableProps>`
+  overflow-x: auto;
+`;
 
 export const Table = styled.table<TableProps>`
   border-collapse: collapse;
@@ -18,11 +23,12 @@ export const Table = styled.table<TableProps>`
       `${props.borderWidth || "1px"} solid ${props.borderColor || "black"}`};
     text-align: ${(props) => props.textAlign || "left"};
     color: ${(props) => props.textColor || "black"};
+    background-color: ${(props) => props.bgColor || "white"};
   }
   th,
   td,
   tr {
-    padding: ${(props) => props.padding || "0.5rem"};
+    padding: ${(props) => props.padding || "0.5rem 1rem"};
   }
   tr {
     &:hover {

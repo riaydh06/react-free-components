@@ -18,7 +18,7 @@ const meta: any = {
   component: TablePrimary,
   decorators: [
     (Story) => (
-      <div style={{ width: "95vw" }}>
+      <div style={{ width: "90vw" }}>
         <Story />
       </div>
     ),
@@ -37,10 +37,20 @@ export const Basic: Story = {
         key: "id",
       },
       {
+        label: "First Name",
+        key: "first_name",
+      },
+      {
+        label: "Last Name",
+        key: "last_name",
+      },
+      {
         key: "first_name",
         renderHeader: <div style={{ color: "red" }}>Full Name</div>,
         renderData: (data: any) => (
-          <div>{data.first_name + " " + data.last_name}</div>
+          <div style={{ whiteSpace: "nowrap" }}>
+            {data.first_name + " " + data.last_name}
+          </div>
         ),
       },
       {
@@ -50,6 +60,16 @@ export const Basic: Story = {
       {
         label: "Address",
         key: "address",
+        renderData: (data: any) => (
+          <div style={{ whiteSpace: "nowrap" }}>{data.address}</div>
+        ),
+      },
+      {
+        label: "Phone",
+        key: "phone",
+        renderData: (data: any) => (
+          <div style={{ whiteSpace: "nowrap" }}>{data.phone}</div>
+        ),
       },
       {
         label: "Tags",
@@ -87,7 +107,19 @@ export const Basic: Story = {
         last_name: "Brown",
         age: 32,
         address: "New York No. 1 Lake Park",
-        tags: ["nice", "developer"],
+        phone: "000 222 3333 444",
+        tags: [
+          "nice",
+          "developer",
+          "loser",
+          "cool",
+          "teacher",
+          "nice",
+          "developer",
+          "loser",
+          "cool",
+          "teacher",
+        ],
       },
       {
         id: "2",
@@ -95,6 +127,7 @@ export const Basic: Story = {
         last_name: "Green",
         age: 42,
         address: "London No. 1 Lake Park",
+        phone: "000 222 3333 444",
         tags: ["loser"],
       },
       {
@@ -103,6 +136,7 @@ export const Basic: Story = {
         last_name: "Black",
         age: 32,
         address: "Sydney No. 1 Lake Park",
+        phone: "000 222 3333 444",
         tags: ["cool", "teacher"],
       },
     ],
