@@ -16,7 +16,7 @@ npm install react-free-table
 
 
 ```bash
-import TablePrimary from 'react-free-table'
+import {TablePrimary} from 'react-free-table'
 
 const columns = [
       {
