@@ -1,5 +1,5 @@
 {
-  "name": "react-free-components",
+  "name": "react-free-table",
   "version": "1.0.15",
   "description": "for test",
   "scripts": {
@@ -26,6 +26,7 @@
     "@storybook/react-webpack5": "^7.0.11",
     "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.2.6",
+    "@types/storybook__addon-info": "^5.2.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rollup": "^3.21.6",
@@ -44,5 +45,8 @@
   "type": "module",
   "resolutions": {
     "react-error-overlay": "6.0.9"
+  },
+  "dependencies": {
+    "@storybook/addon-info": "^5.3.21"
   }
 }
